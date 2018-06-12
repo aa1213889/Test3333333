@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.testtttttttt3.EasyFragmentTestActivity">
+
+    <fragment
+    android:id="@+id/left_fragment_test"
+    android:name="com.example.testtttttttt3.Fragment.LeftFragment"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="0.5">
+    </fragment>
+    <fragment
+    android:id="@+id/right_fragment_test"
+    android:name="com.example.testtttttttt3.Fragment.RightFragment"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="0.5">
+    </fragment>
+</LinearLayout>

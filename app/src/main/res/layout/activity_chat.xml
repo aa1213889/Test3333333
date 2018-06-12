@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8e0e8"
+    tools:context="com.example.testtttttttt3.ChatActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/review_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_send_content"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_send_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/btn_left_send_text"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="发送左边"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/editText_chat_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_left_send_text"
+            android:layout_toEndOf="@+id/btn_left_send_text"
+            android:layout_toStartOf="@+id/btn_right_send_text" />
+
+        <Button
+            android:id="@+id/btn_right_send_text"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="发送右边"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

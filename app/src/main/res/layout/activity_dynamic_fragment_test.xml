@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <fragment
+            android:id="@+id/left_fragment_test"
+            android:name="com.example.testtttttttt3.Fragment.LeftFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </fragment>
+
+        <FrameLayout
+            android:id="@+id/right_layout_test"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+
+        android:text="碎片中模拟返回栈:
+        fragmentTransaction.addToBackStack(null);按下back键活动并没有退出，而是回到rightFragment界面,继续按back键,碎片消失，再按下back,活动才会退出" />
+</RelativeLayout>

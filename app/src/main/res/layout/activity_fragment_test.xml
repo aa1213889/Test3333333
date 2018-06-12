@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:context="com.example.testtttttttt3.FragmentTestActivity"
+        android:id="@+id/linearLayout2">
+
+
+        <Button
+            android:id="@+id/fgt_btn_easy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="静态添加" />
+
+        <Button
+            android:id="@+id/fgt_btn_dynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="动态添加fragment"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="定义:" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView8"
+            android:text="Activity界面中的一部分，可理解为模块化的Activity\n
+1.Fragment不能独立存在，必须嵌入到Activity中\n
+2.Fragment具有自己的生命周期，接收它自己的事件，并               可以在Activity运行时被添加或删除\n
+3.Fragment的生命周期直接受所在的Activity的影响。如：当Activity暂停时，它拥有的所有Fragment们都暂停
+" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView9"
+            android:text="作用:" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView12"
+            android:text="
+1.Fragment从 Android 3.0后引入
+" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView10"
+            android:text="支持动态、灵活的界面设计" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView11"
+            android:text=" 2.在低版本Android 3.0前使用 Fragment，需要采用android-support-v4.jar兼容包" />
+
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView13"
+            android:text="碎片与活动之间的通信:" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView15"
+            android:enabled="true"
+            android:textIsSelectable="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:text="1.在活动中调用碎片的方法： RightFragment rightFragment = (RightFragment)getFragmentManager(). findFragmentById(R.id.right_fragment); \n
+    2.在碎片中调用活动： MainActivity activity = (MainActivity)getActivity(); \n   3.碎片通信其他碎片：（首先获取与当前碎片关联的活动，再通过这个活动获取另一个碎片的实例 LeftFragment leftFragment = (LeftFragment)activity.getFragmentManager(). findFragmentById(R.id.left_fragment);" />
+
+        <Button
+            android:id="@+id/fgt_btn_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView14"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:text="fragment应用"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fgt_btn_news"
+            android:layout_centerHorizontal="true"
+            android:text="简易新闻demo，采用了两个碎片的应用，横竖屏的显示不同显示效果" />
+    </RelativeLayout>
+
+</RelativeLayout>
