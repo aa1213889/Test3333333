@@ -80,7 +80,9 @@
         <activity android:name=".EasyFragmentTestActivity" />
         <activity android:name=".DynamicFragmentTestActivity" />
         <activity android:name=".NewsMainActivity" />
-        <activity android:name=".NewsContentActivity"></activity>
+        <activity android:name=".NewsContentActivity" />
+        <activity android:name=".SharedPerferencesActivity" />
+        <activity android:name=".AnimationTestActivity"></activity>
     </application>
 
 </manifest>

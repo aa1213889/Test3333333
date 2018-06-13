@@ -18,7 +18,6 @@ import com.example.testtttttttt3.Util.MyCustomApplication;
  */
 
 public class BaseActivity extends AppCompatActivity {
-    Toast toast;
 
     protected void immersionSystemBar() {   //自定义标题栏和顶部通知栏颜色一样
         Window window = getWindow();
@@ -35,7 +34,6 @@ public class BaseActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null)
             actionBar.hide();
-
     }
 
     @Override

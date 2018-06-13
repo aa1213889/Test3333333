@@ -18,7 +18,7 @@ import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
 
-    @OnClick({R.id.btn_BaseAda ,R.id.btn_service,R.id.btn_broadcast,R.id.btn_share,R.id.btn_chat,R.id.btn_handler,R.id.btn_fragment})
+    @OnClick({R.id.btn_BaseAda ,R.id.btn_service,R.id.btn_broadcast,R.id.btn_share,R.id.btn_chat,R.id.btn_handler,R.id.btn_fragment,R.id.btn_shared})
     public void onViewClick(View view) {
         switch (view.getId()){
             case R.id.btn_BaseAda:
@@ -42,6 +42,10 @@ public class MainActivity extends BaseActivity {
             case R.id.btn_fragment:
                 startActivity(new Intent(MainActivity.this,FragmentTestActivity.class));
                 break;
+            case R.id.btn_shared:
+                startActivity(new Intent(MainActivity.this,SharedPerferencesActivity.class));
+                break;
+
 
         }
     }
