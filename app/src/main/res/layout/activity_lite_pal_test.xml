@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.testtttttttt3.LitePalTestActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <Button
+            android:id="@+id/lp_btn_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="8dp"
+            android:text="Create"
+            android:textAllCaps="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lp_edit_id" />
+
+        <EditText
+            android:id="@+id/lp_edit_name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="please input name"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/lp_edit_price"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:digits=".0123456789"
+            android:ems="10"
+            android:hint="please input price"
+            android:maxLength="6"
+            app:layout_constraintBottom_toBottomOf="@+id/lp_edit_name"
+            app:layout_constraintStart_toEndOf="@+id/lp_edit_name"
+            app:layout_constraintTop_toTopOf="@+id/lp_edit_name" />
+
+        <EditText
+            android:id="@+id/lp_edit_page"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:digits="0123456789"
+            android:ems="10"
+            android:hint="please input pages"
+            android:maxLength="4"
+            app:layout_constraintEnd_toEndOf="@+id/lp_edit_name"
+            app:layout_constraintStart_toStartOf="@+id/lp_edit_name"
+            app:layout_constraintTop_toBottomOf="@+id/lp_edit_name" />
+
+        <EditText
+            android:id="@+id/lp_edit_author"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="please input author"
+            android:maxLength="20"
+            app:layout_constraintBottom_toBottomOf="@+id/lp_edit_page"
+            app:layout_constraintStart_toEndOf="@+id/lp_edit_page"
+            app:layout_constraintTop_toTopOf="@+id/lp_edit_page"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/lp_edit_id"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:digits="0123456789"
+            android:hint="please input ID"
+            android:maxLength="4"
+            app:layout_constraintStart_toStartOf="@+id/lp_edit_page"
+            app:layout_constraintTop_toBottomOf="@+id/lp_edit_page" />
+
+        <EditText
+            android:id="@+id/lp_edit_press"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="please input press"
+            android:maxLength="20"
+            app:layout_constraintBottom_toBottomOf="@+id/lp_edit_id"
+            app:layout_constraintStart_toEndOf="@+id/lp_edit_id"
+            app:layout_constraintTop_toTopOf="@+id/lp_edit_id" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/constraintLayout"
+        android:layout_centerHorizontal="true">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignTop="@+id/textView28"
+            android:background="@color/gray"
+            android:id="@+id/view2" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="39dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/view2"
+            android:gravity="center"
+            android:text="ID" />
+
+        <View
+            android:id="@+id/View23"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/gray"
+            android:layout_alignEnd="@+id/textView23"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="119dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/View23"
+            android:layout_toEndOf="@+id/View23"
+            android:gravity="center"
+            android:text="书名" />
+        <View
+            android:id="@+id/View24"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/gray"
+            android:layout_alignEnd="@+id/textView24"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="59dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/View24"
+            android:layout_toEndOf="@+id/View24"
+            android:gravity="center"
+            android:text="价格(￥)" />
+        <View
+            android:id="@+id/View25"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/gray"
+            android:layout_alignEnd="@+id/textView25"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="29dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/View25"
+            android:layout_toEndOf="@+id/View25"
+            android:gravity="center"
+            android:text="页数" />
+        <View
+            android:id="@+id/View26"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/gray"
+            android:layout_alignEnd="@+id/textView26"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="59dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/View26"
+            android:layout_toEndOf="@+id/View26"
+            android:gravity="center"
+            android:text="作者" />
+        <View
+            android:id="@+id/View27"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@color/gray"
+            android:layout_alignEnd="@+id/textView27"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/View27"
+            android:layout_toEndOf="@+id/View27"
+            android:gravity="center"
+            android:text="出版社" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/textView27"
+            android:background="@color/gray"
+            android:id="@+id/view3" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lp_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/view3" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
