@@ -11,6 +11,8 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:layout_height="wrap_content">
 
             <TextView
@@ -154,9 +156,8 @@
                 android:id="@+id/sp_img"
                 android:layout_width="300dp"
                 android:layout_height="200dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="48dp"
                 app:layout_constraintEnd_toEndOf="@+id/sp_btn_delete_pic"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/sp_btn_pic"
                 app:layout_constraintTop_toBottomOf="@+id/sp_btn_pic" />

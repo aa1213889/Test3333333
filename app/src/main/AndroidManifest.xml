@@ -82,7 +82,8 @@
         <activity android:name=".NewsMainActivity" />
         <activity android:name=".NewsContentActivity" />
         <activity android:name=".SharedPerferencesActivity" />
-        <activity android:name=".AnimationTestActivity"></activity>
+        <activity android:name=".AnimationTestActivity" />
+        <activity android:name=".LitePalTestActivity"></activity>
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@ package com.example.testtttttttt3;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.testtttttttt3.Util.HttpUtil;
+import com.example.testtttttttt3.Util.ToastUtil;
 
 import java.io.IOException;
 
@@ -33,12 +35,12 @@ public class SharedPerferencesActivity extends AppCompatActivity {
         init();
         readSharedPreferences();
         preferences = getSharedPreferences("picShared",MODE_PRIVATE);
-        String bingPic = preferences.getString("bing_pic","");
-       if(bingPic !=null){
+        String bingPic = preferences.getString("bing_pic",null);
+     //  if(bingPic !=null){
         Glide.with(SharedPerferencesActivity.this).load( bingPic).into(imageViewPic);
-        }else {
-           loadBingPic();
-        }
+//        }else {
+//           loadBingPic();
+//        }
 
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +58,7 @@ public class SharedPerferencesActivity extends AppCompatActivity {
         buttonDownloadPic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                imageViewPic.setVisibility(View.VISIBLE);
                loadBingPic();
             }
         });
@@ -65,6 +68,7 @@ public class SharedPerferencesActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = getSharedPreferences("picShared",MODE_PRIVATE).edit();
                 editor.clear();  //删除缓存
                 editor.apply();
+                imageViewPic.setVisibility(View.INVISIBLE);
             }
         });
     }
@@ -90,6 +94,13 @@ public class SharedPerferencesActivity extends AppCompatActivity {
         HttpUtil.sendOkHttpRequest(requestBingPic,new okhttp3.Callback(){
             @Override
             public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ToastUtil.showToast(SharedPerferencesActivity.this,"加载失败！");
+                    }
+                });
             }
             @Override
             public void onResponse(Call call, Response response) throws IOException {

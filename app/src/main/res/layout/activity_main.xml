@@ -124,7 +124,7 @@
         android:text="Content" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btn_litepal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -180,5 +180,38 @@
         android:layout_below="@+id/button5"
         android:layout_toEndOf="@+id/btn_chat"
         android:text="简单登录界面" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btn_animation"
+        android:layout_below="@+id/button11"
+        android:text="交互" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button12"
+        android:layout_toEndOf="@+id/button"
+        android:text="多媒体" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button10"
+        android:layout_toEndOf="@+id/button13"
+        android:text="百度地图API" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button3"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_toEndOf="@+id/button3"
+        android:text="二维码识别" />
 
 </RelativeLayout>
