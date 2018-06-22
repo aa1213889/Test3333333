@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.testtttttttt3.AnimationTestActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/am_btn_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="26dp"
+        android:text="平移translate"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="6dp"
+        android:text="补间动画:可用xml或者java代码方式实现" />
+
+    <Button
+        android:id="@+id/am_btn_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/am_btn_translate"
+        android:layout_alignBottom="@+id/am_btn_translate"
+        android:layout_toEndOf="@+id/am_btn_translate"
+        android:text="缩放scale"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/am_btn_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/am_btn_group"
+        android:layout_toStartOf="@+id/am_btn_alpha"
+        android:text="旋转rotate"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/am_btn_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/am_btn_rotate"
+        android:layout_alignBottom="@+id/am_btn_rotate"
+        android:layout_alignParentEnd="true"
+        android:text="透明度alpha"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/am_btn_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/am_btn_scale"
+        android:layout_centerHorizontal="true"
+        android:text="组合动画" />
+</RelativeLayout>
