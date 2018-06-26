@@ -11,8 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="26dp"
+        android:layout_below="@+id/textView22"
         android:text="平移translate"
         android:textAllCaps="false" />
 
@@ -61,4 +60,61 @@
         android:layout_below="@+id/am_btn_scale"
         android:layout_centerHorizontal="true"
         android:text="组合动画" />
+
+    <Button
+        android:id="@+id/am_btn_listener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignStart="@+id/am_btn_group"
+        android:layout_below="@+id/am_btn_group"
+        android:text="动画监听" />
+
+    <Button
+        android:id="@+id/am_btn_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/am_btn_fragment"
+        android:layout_toEndOf="@+id/am_btn_fragment"
+        android:text="Activity淡出淡入"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/am_btn_activity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/am_btn_listener"
+        android:text="Activity滑动切换"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/am_btn_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/am_btn_activity2"
+        android:layout_alignBottom="@+id/am_btn_activity2"
+        android:layout_toEndOf="@+id/am_btn_activity2"
+        android:text="fragment动画"
+        android:textAllCaps="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:id="@+id/am_linearLayout"
+        android:visibility="gone">
+
+        <fragment
+            android:id="@+id/left_fragment_test"
+            android:name="com.example.testtttttttt3.Fragment.AnimationTestFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </fragment>
+
+    </LinearLayout>
 </RelativeLayout>

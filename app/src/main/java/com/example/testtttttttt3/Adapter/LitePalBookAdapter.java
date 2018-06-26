@@ -89,6 +89,7 @@ public class LitePalBookAdapter extends RecyclerView.Adapter<LitePalBookAdapter.
             @Override
             public boolean onLongClick(View view) {
                 new AlertDialog.Builder(mContext).setTitle("确定删除?")
+                        .setTitle("删除?")
                         .setNegativeButton("取消",null)
                         .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                             @Override

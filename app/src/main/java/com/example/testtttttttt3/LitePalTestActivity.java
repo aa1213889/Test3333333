@@ -2,6 +2,7 @@ package com.example.testtttttttt3;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
@@ -148,6 +149,7 @@ private LitePalBookAdapter bookAdapter;
       mBookList = LitePal.findAll(Book.class); //遍历
       bookAdapter = new LitePalBookAdapter(this,mBookList);
       RecyclerView recyclerView = findViewById(R.id.lp_recyclerView);
+      recyclerView.setItemAnimator(new DefaultItemAnimator());
       LinearLayoutManager layoutManager = new LinearLayoutManager(this);
       recyclerView.setLayoutManager(layoutManager);
       recyclerView.setAdapter(bookAdapter);
