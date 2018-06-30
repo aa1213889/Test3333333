@@ -9,7 +9,17 @@ import java.io.Serializable;
 public class Fruit implements Serializable {
     private String name;
     private int imageId;
-    public Fruit(String name,int imageId){
+    private int headIamge;
+
+    public int getHeadIamge() {
+        return headIamge;
+    }
+
+    public void setHeadIamge(int headIamge) {
+        this.headIamge = headIamge;
+    }
+
+    public Fruit(String name, int imageId){
         this.name = name;
         this.imageId = imageId;
     }

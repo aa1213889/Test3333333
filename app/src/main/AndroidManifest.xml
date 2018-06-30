@@ -84,7 +84,8 @@
         <activity android:name=".SharedPerferencesActivity" />
         <activity android:name=".AnimationTestActivity" />
         <activity android:name=".LitePalTestActivity" />
-        <activity android:name=".AnimationIntentActivity"></activity>
+        <activity android:name=".AnimationIntentActivity" />
+        <activity android:name=".AnimationInterpolatorActivity"></activity>
     </application>
 
 </manifest>

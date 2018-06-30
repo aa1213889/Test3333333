@@ -1,9 +1,8 @@
 package com.example.testtttttttt3;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,10 +10,13 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
+import android.view.animation.Interpolator;
+import android.view.animation.OvershootInterpolator;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -24,8 +26,11 @@ import com.example.testtttttttt3.Util.ToastUtil;
 
 public class AnimationTestActivity extends AppCompatActivity implements View.OnClickListener{
     Button buttonTranslate,buttonScale,buttonAlpha,buttonRotate,buttonGroup,buttonListener,buttonActivity,buttonActivity2
-            ,buttonFragment,buttonCancel;
+            ,buttonFragment,buttonCancel,buttonStart,buttonStop;
     LinearLayout linearLayout;
+    RelativeLayout relativeLayout;
+    AnimationDrawable animationDrawable;
+    ImageView frameImageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,12 +54,25 @@ public class AnimationTestActivity extends AppCompatActivity implements View.OnC
         buttonActivity.setOnClickListener(this);
         buttonActivity2 = findViewById(R.id.am_btn_activity2);
         buttonActivity2.setOnClickListener(this);
-
         buttonFragment = findViewById(R.id.am_btn_fragment);
         buttonFragment.setOnClickListener(this);
         linearLayout = findViewById(R.id.am_linearLayout);
         buttonCancel = findViewById(R.id.am_fragment_cancel);
         buttonCancel.setOnClickListener(this);
+        buttonStart = findViewById(R.id.am_frame_start);
+        buttonStart.setOnClickListener(this);
+        buttonStop = findViewById(R.id.am_frame_stop);
+        buttonStop.setOnClickListener(this);
+        frameImageView = findViewById(R.id.am_imageView);
+        relativeLayout = findViewById(R.id.am_frame_rl);
+        animationDrawable = new AnimationDrawable();
+        for (int i = 1; i <= 50; i++) {
+            int id = getResources().getIdentifier("doge" + i, "drawable", getPackageName());
+            Drawable drawable = getResources().getDrawable(id);
+            animationDrawable.addFrame(drawable, 100);  //  逐帧动画
+        }
+
+
     }
 
     @Override
@@ -177,11 +195,26 @@ public class AnimationTestActivity extends AppCompatActivity implements View.OnC
                 break;
             case R.id.am_btn_fragment:
                 linearLayout.setVisibility(View.VISIBLE);
+                relativeLayout.setVisibility(View.GONE);
                 linearLayout.startAnimation(AnimationLoader.getInAnimation(this));
                 break;
             case R.id.am_fragment_cancel:
                 linearLayout.setVisibility(View.GONE);
+                relativeLayout.setVisibility(View.VISIBLE);
                 linearLayout.startAnimation(AnimationLoader.getOutAnimation(this));
+                break;
+            case R.id.am_frame_start:
+                animationDrawable.setOneShot(true);
+                frameImageView.setImageDrawable(animationDrawable);
+                // 获取资源对象
+                animationDrawable.stop();
+                // 特别注意：在动画start()之前要先stop()，不然在第一次动画之后会停在最后一帧，这样动画就只会触发一次
+                animationDrawable.start();
+                break;
+            case R.id.am_frame_stop:
+                animationDrawable.setOneShot(true);
+                frameImageView.setImageDrawable(animationDrawable);
+                animationDrawable.stop();
                 break;
                 default:
         }

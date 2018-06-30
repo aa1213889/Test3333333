@@ -117,4 +117,45 @@
         </fragment>
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:id="@+id/am_frame_rl"
+        android:layout_below="@+id/am_btn_activity">
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:text="逐帧动画:
+        优点：通过xml、或者代码实现 使用简单、方便 缺点：容易引起 OOM，因为会使用大量 、 尺寸较大的图片资源" />
+
+        <Button
+            android:id="@+id/am_frame_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/am_imageView"
+            android:layout_below="@+id/am_imageView"
+            android:text="start" />
+
+        <Button
+            android:id="@+id/am_frame_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/am_imageView"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:text="stop" />
+
+        <ImageView
+            android:id="@+id/am_imageView"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/textView29"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 </RelativeLayout>
