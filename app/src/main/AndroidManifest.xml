@@ -85,7 +85,8 @@
         <activity android:name=".AnimationTestActivity" />
         <activity android:name=".LitePalTestActivity" />
         <activity android:name=".AnimationIntentActivity" />
-        <activity android:name=".AnimationInterpolatorActivity"></activity>
+        <activity android:name=".AnimationInterpolatorActivity" />
+        <activity android:name=".HistoryTodayActivity"></activity>
     </application>
 
 </manifest>

@@ -168,12 +168,12 @@
         android:text="天气api" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/btn_history_today"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_property"
         android:layout_toEndOf="@+id/button12"
-        android:text="那年今日api" />
+        android:text="历史上的今天api" />
 
     <Button
         android:id="@+id/button14"
@@ -203,9 +203,9 @@
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button13"
-        android:layout_alignBottom="@+id/button13"
-        android:layout_toEndOf="@+id/button13"
+        android:layout_alignBaseline="@+id/btn_history_today"
+        android:layout_alignBottom="@+id/btn_history_today"
+        android:layout_toEndOf="@+id/btn_history_today"
         android:text="百度地图API" />
 
     <Button
@@ -239,7 +239,7 @@
         android:id="@+id/button17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button13"
+        android:layout_below="@+id/btn_history_today"
         android:layout_toEndOf="@+id/button4"
         android:text="BlueTooth" />
 
