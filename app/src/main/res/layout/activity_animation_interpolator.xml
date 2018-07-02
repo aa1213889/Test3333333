@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.testtttttttt3.AnimationInterpolatorActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="插值器(Interpolator)和估值器(TypeEvaluator)是实现 复杂动画效果的关键"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:text="插值器(Interpolator)"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="定义：一个接口 \n作用：设置 属性值 从初始值过渡到结束值 的变化规律,\n如匀速、加速减速 等等,即确定了 动画效果变化的模式，如匀速变化、加速变化 等等\n应用场景：实现非线性运动的动画效果(非线性运动：动画改变的速率不是一成不变的，如加速 减速运动都属于非线性运动)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+    <Button
+        android:id="@+id/ai_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <TextView
+        android:id="@+id/ai_tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accelerate(动画加速进行)"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+    <TextView
+        android:id="@+id/ai_tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overshoot(快速完成动画，超出再回到结束样式)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ai_tv_1" />
+
+    <TextView
+        android:id="@+id/ai_tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AccelerateDecelerate(先加速再减速)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ai_tv_2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ai_tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anticipate(先退后再加速前进)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ai_tv_3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ai_tv_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AnticipateOvershoot(先退后再加速前进，超出终点后再回终点)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ai_tv_4" />
+
+    <TextView
+        android:id="@+id/ai_tv_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bounce(最后阶段弹球效果)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ai_tv_5" />
+
+    <TextView
+        android:id="@+id/ai_tv_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cycle(周期运动)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ai_tv_6" />
+
+    <TextView
+        android:id="@+id/ai_tv_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decelerate(减速)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ai_tv_7" />
+
+    <TextView
+        android:id="@+id/ai_tv_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linear(匀速)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ai_tv_8" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android内置了 9 种内置的插值器："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ai_btn" />
+</android.support.constraint.ConstraintLayout>
